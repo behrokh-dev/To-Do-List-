@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚫TO-DO-LIST</title>
+    <link rel="stylesheet" href="assets/stylesheet/output.css" />
+    <link rel="stylesheet" href="assets/icon/remixicon.css" />
+  </head>
+  <body>
+    <div class="bobble1"></div>
+    <div class="bobble2"></div>
+    <div class="bobble3"></div>
+    <main class="flex flex-col xl:flex-row items-center justify-center gap-3">
+      <h1>To Do List</h1>
+      <section id="to-do-list">
+        <div class="boxes">
+          <input
+            type="text"
+            id="new-todo"
+            placeholder="What needs to be done?"
+          />
+          <input type="text" id="search-todo" placeholder="Search tasks..." />
+          <button class="addbtn">Add</button>
+          <button class="savebtn">Save</button>
+          <select class="select" name="" id="status">
+            <option value="all">All</option>
+            <option value="done">Done</option>
+            <option value="active">Active</option>
+            <option value="marked">Bookmarked</option>
+          </select>
+          <select class="select" id="category-select">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+            <option value="health">Health</option>
+          </select>
+        </div>
+        <div class="defult-todos">
+          <ul id="dos">
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-1" />
+              <label for="checkbox-1">Make Dalgona Coffee</label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-2" />
+              <label for="checkbox-2">Read a book </label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-4" />
+              <label for="checkbox-4">YouTube workout </label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-5" />
+              <label for="checkbox-5">Party with friends </label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-6" />
+              <label for="checkbox-6">Netflix binge </label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+            <li class="lii">
+              <input type="checkbox" class="checked" id="checkbox-8" />
+              <label for="checkbox-8">Try a new recipe </label>
+              <div class="actions">
+                <button data-action="edit">
+                  <i class="ri-pencil-ai-line"></i>
+                </button>
+                <button data-action="delete">
+                  <i class="ri-close-circle-line"></i>
+                </button>
+                <button data-action="mark">
+                  <i class="ri-bookmark-line"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="container"><span id="task-count"></span></div>
+      </section>
+    </main>
+    <!-- ////////////// -->
+    <!-- //////////////footer///////// -->
+    <footer id="app-footer">
+      <div class="footer-dark">
+        <div class="footer-profile">
+          <div class="footer-avatar">
+            <img src="assets/img/dfgh.png" alt="">
+          </div>
+          <div>
+            <p class="footer-name">Behrokh Naderi</p>
+            <p class="footer-role">Frontend Developer</p>
+          </div>
+        </div>
+
+        <p class="footer-quote">Building small things, one bug at a time.</p>
+
+        <div class="footer-links">
+          <a href="https://github.com/behrokh-dev" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/behrokh-naderi/" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="https://www.instagram.com/behrokh_dev" target="_blank" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="mailto:naderibehrokh@gmail.com" target="_blank" aria-label="Gmail"><i class="ri-google-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-light">
+        <div>
+          <p class="footer-label">Built with</p>
+          <div class="footer-tags">
+            <span>HTML</span>
+            <span>Tailwind CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="footer-status">
+          <span>© 2026</span>
+          <span>@Behrokh-dev</span>
+          <span class="footer-available">
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascript/master.js"></script>
+  </body>
+</html>

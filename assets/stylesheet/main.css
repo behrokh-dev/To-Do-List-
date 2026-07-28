@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply min-h-screen font-sans select-none relative flex flex-col items-center gap-8 bg-[linear-gradient(135deg,#e4e4e7_0%,#f4f4f5_25%,#c7c7cc_50%,#f4f4f5_75%,#d4d4d8_100%)];
+  }
+  h1 {
+    @apply text-7xl font-bold mb-8 text-center bg-[linear-gradient(90deg,#3f3f46,#a1a1aa,#18181b,#71717a)] bg-size-[300%_auto] bg-clip-text text-transparent animate-[shimmer_6s_linear_infinite];
+  }
+}
+main {
+  @apply flex flex-col w-full items-center  mt-10 mb-5 relative z-10  gap-3;
+}
+
+.bobble1 {
+  @apply absolute top-16 left-16 w-72 h-72 rounded-full bg-zinc-300/50 backdrop-blur-xl border border-white/50  shadow-xl;
+}
+.bobble2 {
+  @apply absolute bottom-10 right-20 w-96 h-96 rounded-full bg-slate-300/40 backdrop-blur-xl border border-white/50 shadow-xl;
+}
+.bobble3 {
+  @apply absolute top-1/2 right-5 w-52 h-52 rounded-full bg-neutral-200/60 backdrop-blur-xl border border-white/60  shadow-xl;
+}
+#to-do-list {
+  @apply bg-white/70 backdrop-blur-md rounded-2xl w-full max-w-3xl lg:max-w-4xl  mx-4 md:mx-0 [border:1px_solid_rgba(24,24,27,0.1)] shadow-[0_0_0_1px_rgba(255,255,255,0.6)_inset,0_20px_50px_rgba(0,0,0,0.15)];
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+.boxes {
+  @apply flex flex-col sm:flex-row flex-wrap gap-3 p-4 sm:p-6 border-b border-black/10;
+}
+
+#new-todo,
+#search-todo {
+  @apply w-full sm:flex-1 min-w-0 bg-white/80 rounded-lg px-4 py-2.5 text-sm text-zinc-800 placeholder:text-zinc-400 transition;
+}
+
+#new-todo:focus,
+#search-todo:focus {
+  @apply outline-none shadow-[0_0_0_2px_rgba(24,24,27,0.4),0_0_16px_rgba(161,161,170,0.5)];
+}
+
+.addbtn {
+  @apply px-5 py-2.5 text-sm font-medium rounded-lg text-white transition active:scale-95 bg-[linear-gradient(to_bottom,#3f3f46,#18181b)];
+}
+
+.addbtn:hover {
+  @apply bg-[linear-gradient(to_bottom,#52525b,#27272a)] shadow-[0_0_16px_rgba(63,63,70,0.5)];
+}
+
+.savebtn {
+  @apply hidden px-5 py-2.5 text-sm font-medium rounded-lg text-zinc-700 bg-white/60 border border-[rgba(24,24,27,0.1)] transition active:scale-95;
+}
+
+.savebtn:hover {
+  @apply bg-white shadow-[0_0_12px_rgba(24,24,27,0.15)];
+}
+/* .del {
+  @apply -translate-x-full opacity-0 max-h-0 pt-0 pb-0 ;
+} */
+ .lii.del {
+  @apply -translate-x-full opacity-0 max-h-0 pt-0 pb-0 ;
+}
+.select {
+  @apply bg-white/80 rounded-lg px-4 py-2.5 text-sm text-zinc-700 border border-[rgba(24,24,27,0.1)];
+}
+
+.select:focus {
+  @apply outline-none shadow-[0_0_0_2px_rgba(24,24,27,0.4),0_0_16px_rgba(161,161,170,0.5)];
+}
+
+#dos {
+  @apply divide-y divide-black/10 max-h-80 overflow-y-auto overflow-x-hidden;
+}
+
+.lii {
+  @apply flex items-center gap-3 px-8 py-4 max-h-25 overflow-hidden transition-[translate,opacity,max-height,padding] duration-700;
+}
+
+.lii:hover {
+  @apply bg-white/50 -translate-y-0.5 shadow-[0_8px_20px_rgba(0,0,0,0.08)];
+}
+
+.lii-source-hidden {
+  @apply hidden;
+}
+
+.lii-placeholder {
+  @apply bg-zinc-100/60 border-2 border-dashed border-[rgba(24,24,27,0.2)] rounded-xl mx-2;
+}
+
+.lii-ghost {
+  @apply fixed pointer-events-none z-50 list-none scale-[1.03] shadow-[0_25px_50px_rgba(0,0,0,0.3),0_0_0_1px_rgba(24,24,27,0.1)] rounded-xl opacity-95;
+}
+.lii.marked {
+  @apply bg-[rgba(250,235,200,0.35)] border-l-[3px] border-l-[rgba(245,158,11,0.6)];
+}
+
+.lii.marked:hover {
+  @apply bg-[rgba(250,235,200,0.5)];
+}
+
+.lii.marked .actions button[data-action="mark"] {
+  @apply text-[#d97706];
+}
+.lii.editing {
+  @apply bg-[rgba(237,233,254,0.55)] border-l-[3px] border-l-[rgba(139,92,246,0.6)];
+}
+
+.lii.editing:hover {
+  @apply bg-[rgba(237,233,254,0.75)];
+}
+.checked {
+  @apply w-6 h-6 accent-zinc-700 cursor-pointer transition;
+}
+.lii.completed {
+  @apply bg-[rgba(220,245,225,0.45)] border-l-[3px] border-l-[rgba(34,197,94,0.55)];
+}
+
+.lii.completed:hover {
+  @apply bg-[rgba(220,245,225,0.6)];
+}
+.checked:hover {
+  @apply drop-shadow-[0_0_4px_rgba(63,63,70,0.5)];
+}
+
+.checked:checked {
+  @apply drop-shadow-[0_0_6px_rgba(161,161,170,0.8)];
+}
+
+.checked:checked::after {
+  content: "\ea5c";
+  font-family: "remixicon";
+  @apply text-white text-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lii label {
+  @apply flex-1 text-lg text-zinc-800 transition;
+}
+
+.checked:checked ~ label {
+  @apply text-zinc-400 line-through;
+}
+
+.actions {
+  @apply flex gap-1 transition text-xl;
+}
+
+.actions button {
+  @apply w-10 h-10 flex items-center justify-center rounded-md text-zinc-500 transition active:scale-90;
+}
+
+.actions button[data-action="edit"]:hover {
+  @apply text-violet-600 bg-violet-50 shadow-[0_0_12px_rgba(139,92,246,0.45)];
+}
+
+.actions button[data-action="delete"]:hover {
+  @apply text-red-500 bg-red-50 shadow-[0_0_12px_rgba(239,68,68,0.5)];
+}
+
+.actions button[data-action="mark"]:hover {
+  @apply text-amber-500 bg-amber-50 shadow-[0_0_12px_rgba(245,158,11,0.5)];
+}
+
+#container {
+  @apply flex items-center justify-center px-8 py-4 border-t border-black/10 text-sm text-zinc-600 bg-[rgba(255,255,255,0.35)] backdrop-blur-[10px];
+}
+
+#task-count {
+  @apply font-medium tracking-wide bg-[linear-gradient(90deg,#71717a,#1c1c1c,#71717a)] bg-[length:200%_auto] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[countGlow_2s_linear_infinite];
+}
+
+.cat-dot {
+  @apply inline-block w-2.5 h-2.5 rounded-full shrink-0;
+}
+
+.cat-work {
+  @apply bg-[#8b5cf6];
+}
+
+.cat-personal {
+  @apply bg-[#3b82f6];
+}
+
+.cat-shopping {
+  @apply bg-[#f59e0b];
+}
+
+.cat-health {
+  @apply bg-[#22c55e];
+}
+
+#app-footer {
+  @apply w-full max-w-3xl lg:max-w-4xl  mx-4 md:mx-0 mt-4 rounded-2xl overflow-hidden flex flex-wrap mb-10 z-50 border border-[rgba(24,24,27,0.1)] shadow-[0_12px_30px_rgba(0,0,0,0.14)];
+}
+
+.footer-dark {
+  @apply flex-1 flex flex-col justify-between gap-4 min-w-55 p-[1.6rem_1.5rem] bg-[linear-gradient(150deg,#27272a,#18181b_60%,#3f3f46)];
+}
+
+.footer-profile {
+  @apply flex items-center gap-3;
+}
+
+.footer-avatar {
+  @apply *:w-30 *:h-30 *:rounded-full *:object-cover *:flex *:items-center *:justify-center text-lg;
+}
+
+.footer-name {
+  @apply text-xl font-medium text-[#f4f4f5];
+}
+
+.footer-role {
+  @apply text-lg mt-0.5 text-[#a1a1aa];
+}
+
+.footer-quote {
+  @apply text-lg leading-relaxed italic text-[#d4d4d8];
+}
+
+.footer-links {
+  @apply flex gap-2;
+}
+
+.footer-links a {
+  @apply w-10 h-10 rounded-md flex items-center justify-center text-xl transition bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)] text-zinc-200;
+}
+
+.footer-links a:hover {
+  @apply bg-[rgba(255,255,255,0.16)];
+}
+
+.footer-light {
+  @apply flex-1 flex flex-col justify-between gap-4 min-w-[260px] p-[1.6rem_1.5rem] bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px];
+}
+
+.footer-label {
+  @apply text-lg uppercase mb-2.5 tracking-wider text-[#a1a1aa];
+}
+
+.footer-tags {
+  @apply flex flex-col gap-3 text-lg;
+}
+
+.footer-tags span {
+  @apply text-sm px-2.5 py-1 w-25 rounded-full bg-[rgba(24,24,27,0.06)] text-zinc-700 border border-[rgba(24,24,27,0.08)];
+}
+
+.footer-status {
+  @apply flex items-center justify-between text-sm text-[#a1a1aa];
+}
+
+.footer-available {
+  @apply flex items-center gap-1.5;
+}
+
+.footer-available .dot {
+  @apply w-1.5 h-1.5 rounded-full inline-block bg-[#22c55e];
+}
+
+@keyframes countGlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* npx @tailwindcss/cli -i ./src/assets/stylesheet/main.css -o ./src/assets/stylesheet/output.css --watch */
