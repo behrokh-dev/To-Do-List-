@@ -40,6 +40,7 @@ Organize tasks using categories such as:
 - 🏠 Personal
 - 📚 Study
 - ✅ Health
+
 Each task is displayed with its own category indicator.
 
 ### 📊 Task Counter
