@@ -11,7 +11,7 @@ Designed with a clean UI and smooth user experience, this project helps users or
 ---
 ## 📸 Preview
 
-> Add a screenshot or GIF here to showcase the application.
+<img width="1901" height="858" alt="Image" src="https://github.com/user-attachments/assets/9acd9192-7b0d-4365-b85a-898754b77eb6" />
 
 ---
 ## ✨ Features
