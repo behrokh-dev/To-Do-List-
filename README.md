@@ -31,6 +31,7 @@ Designed with a clean UI and smooth user experience, this project helps users or
   - All
   - Active
   - Completed
+  - Bookmark
 
 ### 🏷️ Categories
 Organize tasks using categories such as:
