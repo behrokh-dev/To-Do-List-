@@ -12,6 +12,7 @@ Designed with a clean UI and smooth user experience, this project helps users or
 ## 📸 Preview
 
 <img width="1901" height="858" alt="Image" src="https://github.com/user-attachments/assets/9acd9192-7b0d-4365-b85a-898754b77eb6" />
+<img width="1901" height="441" alt="Image" src="https://github.com/user-attachments/assets/19accd79-5e24-4cc7-b348-3cf232c3f09d" />
 
 ---
 ## ✨ Features
